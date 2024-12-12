@@ -1,0 +1,128 @@
+html {
+  font-size: 12pt;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  /* Reseteo del margen y el padding de todos los elementos */
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; para que las cajas cuenten
+  tanto el margen, padding y borde como parte de sus dimensiones
+  asi, si creamos un div de 400x400 y le ponemos el margen el conjunto
+  medirá 400x400 y facilita la maquetación */
+  box-sizing: border-box;
+  /* Descomentar la siguiente linea para ver los bordes de las cajas */
+  /* outline: 1px solid red; */
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto; /** Para centrar el contenedor **/
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-size: 2rem;
+}
+
+.subtitulo {
+  font-size: 1.7rem;
+}
+
+.negrita {
+  font-weight: 700;
+}
+
+img {
+  width: 300px;
+  height: 225px;
+  /* propiedad object-fit: cover; para que la imagen no pierda su relacion
+  de aspecto */
+  object-fit: cover; 
+  margin: 0 auto;
+}
+
+hr {
+  border: none;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.ingredientes {
+  width: 40%;
+}
+
+.ingredientes, .pasos {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.ingrediente {
+  display: flex;
+  /* justifi-content: space-between para que los elementos en linea se
+  distribuyan de manera que uno este al principio y el otro al final dejando
+  espacio igual entre ellos */
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: .4rem;
+}
+
+.puntos {
+  /* Pongo la propiedad flex: 1; para que se le de prioridad a los puntos en 
+  el flex y ocupen todo el escpacio */
+  flex: 1;
+  /* En CSS se puede definir un borde para que este sea de puntos en vez de una
+  línea sólida, las opciones serían solid(linea solida), dotted(puntos),
+  dashed (efecto relieve),... entre otras */
+  border-bottom: .1rem dotted black;
+  /* Margen por los lados de los puntos para que no estén pegados a las letras */
+  margin: 0 .2rem;
+}
+
+.paso {
+  text-wrap: wrap;
+  margin-bottom: .5rem;
+}
+
+/* MEDIA QUERY PARA RESPONSIVE */
+
+@media (max-width: 1245px) {
+  html {
+    font-size: 10pt;
+  }
+
+  .info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ingredientes,.pasos {
+    width: 80%;
+  }
+}
