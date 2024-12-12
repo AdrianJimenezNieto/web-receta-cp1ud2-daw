@@ -1,0 +1,2 @@
+# Web de receta de patatas fritas
+- Web que muestra la receta de las patatas fritas según las especificaciones del ejercicio propuesto por el profesor de la materia "Lenguajes de Marcas" del ciclo formativo DAW en la plataforma Cesur. 
